@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-::root{
-  font-size: 18px;
-}
-
 .container{
   --gutter-size: 1rem;
   --column-count: 12;
@@ -29,6 +25,15 @@
   padding-left: var(--gutter-size);
   padding-right: var(--gutter-size);
 }
+
+.no-gutters {
+  margin: 0;
+}
+
+.no-gutters > * {
+  padding: 0;
+}
+
 
 .col-1{
   --width: calc(100% / var(--column-count) * 1);
@@ -303,7 +308,7 @@ xxl	≥1400px
 
 @media screen and (min-width: 1200px){
   .container{
-    max-width: 1770px;
+    max-width: 1170px;
   }
 
   .col-xl-1{
